@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="match_parent"
+    tools:context=".ForWork">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Join For Work"
+        android:textSize="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="127dp"
+        />
+
+
+        <TextView
+            android:id="@+id/Address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/label"
+            android:text="Category Type *"
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"
+            android:padding="6dp"
+            android:textColor="#555555"
+            android:layout_marginTop="50dp"
+            />
+
+        <Spinner
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Address"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/border"
+            android:hint="Address: "
+            android:inputType="textPersonName"
+            android:padding="16dp"
+            android:paddingLeft="18dp"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/labelOthers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/address"
+            android:text="Others "
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"
+            android:padding="6dp"
+            android:textColor="#555555"
+
+            />
+
+        <EditText
+            android:id="@+id/others"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/labelOthers"
+            android:textSize="16sp"
+            android:padding="6dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#555555"/>
+
+
+        <TextView
+            android:id="@+id/a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/others"
+            android:text="Address *"
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"
+            android:padding="6dp"
+            android:textColor="#555555"
+            />
+        <EditText
+            android:id="@+id/b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/a"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/border"
+            android:inputType="textPersonName"
+            android:padding="6dp"
+            android:paddingLeft="18dp"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/Exp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/b"
+            android:text="Experience in yrs*"
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"
+            android:padding="6dp"
+            android:textColor="#555555"
+            />
+
+        <EditText
+            android:id="@+id/numInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_below="@+id/Exp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/border"
+            android:padding="6dp"
+            android:paddingLeft="18dp"
+            android:textSize="18sp"
+            android:inputType="numberSigned" />
+
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/numInput"
+            android:text="Gender *"
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"
+            android:padding="6dp"
+            android:textColor="#555555"
+            />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gender"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:id="@+id/RadioMale"
+                android:text="Male"/>
+           <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:textSize="16sp"
+               android:id="@+id/RadioFemale"
+               android:text="Female"/>
+
+        </RadioGroup>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gender"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="80dp"
+            android:text="Apply" />
+
+
+    </RelativeLayout>
+
+</ScrollView>
