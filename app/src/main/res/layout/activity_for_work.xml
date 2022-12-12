@@ -21,7 +21,6 @@
             android:layout_marginLeft="127dp"
             />
 
-
         <TextView
             android:id="@+id/Address"
             android:layout_width="match_parent"
@@ -55,34 +54,10 @@
 
 
         <TextView
-            android:id="@+id/labelOthers"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/address"
-            android:text="Others "
-            android:layout_marginLeft="10dp"
-            android:textSize="16sp"
-            android:padding="6dp"
-            android:textColor="#555555"
-
-            />
-
-        <EditText
-            android:id="@+id/others"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/labelOthers"
-            android:textSize="16sp"
-            android:padding="6dp"
-            android:layout_marginLeft="10dp"
-            android:textColor="#555555"/>
-
-
-        <TextView
             android:id="@+id/a"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/others"
+            android:layout_below="@+id/address"
             android:text="Address *"
             android:layout_marginLeft="10dp"
             android:textSize="16sp"
@@ -90,7 +65,7 @@
             android:textColor="#555555"
             />
         <EditText
-            android:id="@+id/b"
+            android:id="@+id/addressIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/a"
@@ -109,7 +84,7 @@
             android:id="@+id/Exp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/b"
+            android:layout_below="@+id/addressIn"
             android:text="Experience in yrs*"
             android:layout_marginLeft="10dp"
             android:textSize="16sp"
@@ -136,47 +111,41 @@
             android:inputType="numberSigned" />
 
         <TextView
-            android:id="@+id/gender"
+            android:id="@+id/City"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/numInput"
-            android:text="Gender *"
+            android:text="City *"
             android:layout_marginLeft="10dp"
             android:textSize="16sp"
             android:padding="6dp"
             android:textColor="#555555"
             />
-
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/gender"
-            android:orientation="horizontal"
-            android:layout_marginLeft="10dp">
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:id="@+id/RadioMale"
-                android:text="Male"/>
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:id="@+id/RadioFemale"
-                android:text="Female"/>
-
-        </RadioGroup>
+<!--        <Spinner-->
+<!--            android:id="@+id/ecity"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/Address"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_marginTop="1dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:background="@drawable/border"-->
+<!--            android:inputType="textPersonName"-->
+<!--            android:padding="16dp"-->
+<!--            android:paddingLeft="18dp"-->
+<!--            android:textSize="18sp"/>-->
 
         <Button
             android:layout_width="wrap_content"
+            android:id="@+id/btnApply"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/gender"
+            android:layout_below="@+id/City"
             android:layout_marginLeft="150dp"
             android:layout_marginTop="80dp"
             android:text="Apply" />
-
 
     </RelativeLayout>
 

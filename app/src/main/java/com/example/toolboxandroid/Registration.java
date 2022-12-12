@@ -214,23 +214,13 @@ public class Registration extends AppCompatActivity {
 
                                         Toast.makeText(Registration.this, "user registration successful please verify your email ", Toast.LENGTH_SHORT).show();
 
-
-
-
-
-
                                     }else {
                                         Toast.makeText(Registration.this, "Registration Failed.Please Try Again", Toast.LENGTH_SHORT).show();
 
-
                                     }
                                     progressBar.setVisibility(View.GONE);
-
-
                                 }
                             });
-
-
 
                         }else{
                             try{
@@ -247,15 +237,11 @@ public class Registration extends AppCompatActivity {
                             }catch (Exception e){
                                 Log.e(TAG,e.getMessage());
                                 Toast.makeText(Registration.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-
                             }
                             progressBar.setVisibility(View.GONE);
                         }
-
                     }
                 });
-
-
 
     }
 }

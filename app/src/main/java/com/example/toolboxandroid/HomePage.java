@@ -24,7 +24,6 @@ public class HomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
-
         btnHire = findViewById(R.id.btnHire);
         btnWork = findViewById(R.id.btnWork);
         bottom_nav = findViewById(R.id.bottom_navigation);

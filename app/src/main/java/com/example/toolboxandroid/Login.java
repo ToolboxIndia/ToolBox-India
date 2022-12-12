@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
@@ -22,6 +23,9 @@ public class Login extends AppCompatActivity {
     private EditText LoginEtEmail,LoginEtPassword;
     private ProgressBar progressBar;
     private FirebaseAuth authProfile;
+    SharedPreferences sharedPreferences;
+
+    private static final String SHARED_PREF_NAME ="mypref";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +34,11 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         LoginEtEmail = (EditText) findViewById(R.id.LoginEtEmail);
         LoginEtPassword = (EditText) findViewById(R.id.LoginEtPassword);
-        progressBar = (ProgressBar) findViewById(R.id.progressbar);
+
+        //Storing data into SharedPreferences(Local Storage)
+        sharedPreferences =getSharedPreferences(SHARED_PREF_NAME,MODE_PRIVATE);
+
+//        progressBar = (ProgressBar) findViewById(R.id.progressbar);
 
         //Login Button
         authProfile = FirebaseAuth.getInstance();
@@ -51,7 +59,7 @@ public class Login extends AppCompatActivity {
                     LoginEtEmail.setError("Email Required");
                     LoginEtEmail.requestFocus();
                 }else if(!Patterns.EMAIL_ADDRESS.matcher(txtEmail).matches()){
-                    Toast.makeText(Login.this, "Please Enter Your Email", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Login.this, "Please Enter Valid Email", Toast.LENGTH_SHORT).show();
                     LoginEtEmail.setError("Valid Email Required");
                     LoginEtEmail.requestFocus();
                 }else if(TextUtils.isEmpty(txtPassword)){
@@ -59,6 +67,13 @@ public class Login extends AppCompatActivity {
                     LoginEtPassword.setError("Password Required");
                     LoginEtPassword.requestFocus();
                 }else{
+
+                    // Creating an Editor object to edit(write to the file)
+                    SharedPreferences.Editor myEdit = sharedPreferences.edit();
+                    // Storing the key and its value as the data fetched from edittext
+                    myEdit.putString(SHARED_PREF_NAME,LoginEtEmail.getText().toString());
+                    myEdit.apply();
+
                     loginUser(txtEmail,txtPassword);
                 }
 
