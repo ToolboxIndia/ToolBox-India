@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">ToolBox Android</string>
+
+
+    <string-array name="cat">
+        <item>Electrician</item>
+        <item>Pet Trainer</item>
+        <item>Plumber</item>
+        <item>Maintainace</item>
+        <item>House kepper</item>
+        <item>Doctor</item>
+        <item>Painter</item>
+        <item>Furniture</item>
+
+    </string-array>
 </resources>
