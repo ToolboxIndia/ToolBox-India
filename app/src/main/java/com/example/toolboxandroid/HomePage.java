@@ -27,6 +27,7 @@ public class HomePage extends AppCompatActivity {
         btnHire = findViewById(R.id.btnHire);
         btnWork = findViewById(R.id.btnWork);
         bottom_nav = findViewById(R.id.bottom_navigation);
+        bottom_nav.setSelectedItemId(R.id.home);
 
         btnHire.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,11 +49,14 @@ public class HomePage extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.home:
-                        Toast.makeText(HomePage.this, "Home Page", Toast.LENGTH_SHORT).show();
+                        return true;
                     case R.id.search:
                         Toast.makeText(HomePage.this, "Search", Toast.LENGTH_SHORT).show();
+                        break;
                     case R.id.myacc:
-                        Toast.makeText(HomePage.this, "My Account", Toast.LENGTH_SHORT).show();
+                         startActivity(new Intent(getApplicationContext(),SetupActivity.class));
+                         overridePendingTransition(0,0);
+                         return true;
 
                 }
                 return false;

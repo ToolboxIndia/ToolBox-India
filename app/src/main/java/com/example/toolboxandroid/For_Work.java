@@ -2,6 +2,7 @@ package com.example.toolboxandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -20,11 +21,15 @@ public class For_Work extends AppCompatActivity implements AdapterView.OnItemSel
 
     Button btnApply;
     Spinner cat;
-    EditText numInput,addressIn,city;
+    EditText numInput,addressIn,city,description,payment;
     SharedPreferences sharedPreferences;
     String EmailId;
     private static final String SHARED_PREF_NAME="mypref";
 
+    Spinner type;
+
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -35,6 +40,12 @@ public class For_Work extends AppCompatActivity implements AdapterView.OnItemSel
         numInput = findViewById(R.id.numInput);
         city = findViewById(R.id._City);
         cat = findViewById(R.id.category);
+        description = findViewById(R.id.description);
+        payment = findViewById(R.id.Payment);
+
+
+
+
 
         Spinner spinner = findViewById(R.id.category);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.cat, android.R.layout.simple_spinner_item);
@@ -62,6 +73,8 @@ public class For_Work extends AppCompatActivity implements AdapterView.OnItemSel
                 w.put("City", city.getText().toString());
                 w.put("Category",cat.toString());
                 w.put("Experience",numInput.getText().toString());
+                w.put("Work Description",description.getText().toString());
+                w.put("Work Payment",payment.getText().toString());
                 FirebaseDatabase.getInstance().getReference().child("Workers").push().setValue(w);
                 Toast.makeText(For_Work.this, "Succes", Toast.LENGTH_SHORT).show();
 
@@ -69,6 +82,7 @@ public class For_Work extends AppCompatActivity implements AdapterView.OnItemSel
         });
 
     }
+
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int i, long l) {

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "39755120505",
+    "firebase_url": "https://toolbox-android-129aa-default-rtdb.firebaseio.com",
+    "project_id": "toolbox-android-129aa",
+    "storage_bucket": "toolbox-android-129aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39755120505:android:f0b24781f2208ace3439a8",
+        "android_client_info": {
+          "package_name": "com.example.toolboxandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "39755120505-me7h5avs6nfmj6sg69eh0779r5qiupmd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1fh-e7EDAFfkk0xNssk3fmQ3DOzu95bI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "39755120505-me7h5avs6nfmj6sg69eh0779r5qiupmd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

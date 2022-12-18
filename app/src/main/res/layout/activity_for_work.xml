@@ -9,17 +9,22 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:padding="15dp">
+
 
         <TextView
             android:id="@+id/label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Join For Work"
-            android:textSize="25dp"
+            android:layout_marginLeft="118dp"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="127dp"
-            />
+            android:textStyle="bold"
+            android:textColor="#C2185B"
+            android:fontFamily="@font/amatica_sc"
+            android:text="Job Post"
+            android:textSize="30dp" />
 
         <TextView
             android:id="@+id/Address"
@@ -33,6 +38,7 @@
             android:textColor="#555555"
             android:layout_marginTop="50dp"
             />
+
 
         <Spinner
             android:id="@+id/category"
@@ -140,6 +146,65 @@
             android:paddingLeft="18dp"
             android:textSize="18sp"
             />
+
+        <TextView
+            android:id="@+id/lblDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/_City"
+            android:text="Work Description *"
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"
+            android:padding="6dp"
+            android:textColor="#555555"
+            />
+
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="337dp"
+            android:layout_height="110dp"
+            android:layout_below="@+id/lblDescription"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/border1"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+
+            android:padding="6dp"
+            android:paddingLeft="18dp"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/lblPayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/description"
+            android:text="Work Payment *"
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"
+            android:padding="6dp"
+            android:textColor="#555555"
+            />
+
+        <EditText
+            android:id="@+id/Payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:hint="Write ex between(500-1000)"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/border"
+            android:padding="6dp"
+            android:layout_below="@+id/lblPayment"
+            android:paddingLeft="18dp"
+            android:textSize="18sp"
+            />
 <!--        <Spinner-->
 <!--            android:id="@+id/ecity"-->
 <!--            android:layout_width="match_parent"-->
@@ -161,10 +226,11 @@
             android:layout_width="wrap_content"
             android:id="@+id/btnApply"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/_City"
-            android:layout_marginLeft="150dp"
-            android:layout_marginTop="80dp"
-            android:text="Apply" />
+            android:layout_below="@+id/Payment"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
+            android:text="Post" />
 
     </RelativeLayout>
 

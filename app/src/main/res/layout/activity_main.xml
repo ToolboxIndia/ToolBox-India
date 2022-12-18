@@ -28,6 +28,19 @@
             app:layout_constraintVertical_bias="0.83"
             tools:layout_editor_absoluteX="5dp"
             />
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="407dp"
+            android:layout_height="259dp"
+            android:src="@drawable/welcome"
+            android:layout_below="@+id/welcomeGif"
+            android:id="@+id/gif2"
+            android:layout_marginTop="-30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.83"
+            tools:layout_editor_absoluteX="5dp"
+            />
+
 
 
 
@@ -48,10 +61,23 @@
             android:layout_height="wrap_content"
             android:id="@+id/firstRegister"
             android:text="Register"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:layout_marginLeft="70dp"
             android:layout_marginRight="70dp"
-            android:layout_below="@+id/welcomeGif"
+            android:layout_below="@+id/gif2"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/RegisterTvEnd"
+            android:layout_marginTop="40dp"
+            android:text="All rights reserved @PuneDarshan 2022"
+            android:textAlignment="center"
+            android:layout_below="@+id/firstLogin"
+            android:textSize="10sp"
+
+
             />
 
 
