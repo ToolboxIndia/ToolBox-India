@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">ToolBox Android</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
 
 
     <string-array name="cat">
