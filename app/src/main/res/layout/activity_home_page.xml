@@ -16,6 +16,7 @@
             android:layout_height="60dp"
             android:background="@color/purple_500">
 
+
             <ImageView
                 android:id="@+id/menu_img"
                 android:layout_width="34dp"
