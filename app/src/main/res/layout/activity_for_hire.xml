@@ -18,10 +18,10 @@
             android:id="@+id/label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-          android:layout_centerHorizontal="true"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/amatica_sc"
-            android:text="Join as Work"
+            android:text="Hire Worker"
             android:textColor="#C2185B"
             android:textSize="30dp"
             android:textStyle="bold" />
@@ -58,6 +58,7 @@
             android:paddingLeft="18dp"
             android:textSize="18sp" />
 
+
         <TextView
             android:id="@+id/a"
             android:layout_width="wrap_content"
@@ -70,13 +71,7 @@
             android:textColor="#555555"
             />
 
-<!--        <Button-->
-<!--            android:id="@+id/getLoc"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="38dp"-->
-<!--            android:layout_below="@+id/category"-->
-<!--            android:layout_marginLeft="215dp"-->
-<!--            android:text="Location" />-->
+
 
 
         <EditText
@@ -214,22 +209,6 @@
             android:paddingLeft="18dp"
             android:textSize="18sp"
             />
-<!--        <Spinner-->
-<!--            android:id="@+id/ecity"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_below="@+id/Address"-->
-<!--            android:layout_marginStart="10dp"-->
-<!--            android:layout_marginLeft="10dp"-->
-<!--            android:layout_marginTop="1dp"-->
-<!--            android:layout_marginEnd="10dp"-->
-<!--            android:layout_marginRight="10dp"-->
-<!--            android:layout_marginBottom="10dp"-->
-<!--            android:background="@drawable/border"-->
-<!--            android:inputType="textPersonName"-->
-<!--            android:padding="16dp"-->
-<!--            android:paddingLeft="18dp"-->
-<!--            android:textSize="18sp"/>-->
 
         <Button
             android:layout_width="wrap_content"

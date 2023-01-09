@@ -36,7 +36,7 @@ import java.util.regex.Pattern;
 public class Registration extends AppCompatActivity {
 
 
-    private EditText RegisterEtFullname,RegisterEtEmail,RegisterEtBirthdate,RegisterEtMobile,RegisterEtPassword,RegisterEtConfirmPassword;
+    private EditText RegisterEtFullname,addhaar,RegisterEtEmail,RegisterEtBirthdate,RegisterEtMobile,RegisterEtPassword,RegisterEtConfirmPassword;
     private ProgressBar progressBar;
     private RadioGroup RegisterRadiogroup;
     private RadioButton RegisterRadioButtonSelected;
@@ -56,6 +56,7 @@ public class Registration extends AppCompatActivity {
 
         RegisterEtFullname = (EditText) findViewById(R.id.RegisterEtFullname);
         RegisterEtEmail = (EditText) findViewById(R.id.RegisterEtEmail);
+        addhaar = findViewById(R.id.addharData);
         RegisterEtBirthdate = (EditText) findViewById(R.id.RegisterEtBirthdate);
         RegisterEtMobile = (EditText) findViewById(R.id.RegisterEtMobile);
         RegisterEtPassword = (EditText) findViewById(R.id.RegisterEtPassword);
@@ -100,6 +101,7 @@ public class Registration extends AppCompatActivity {
                 //obtain Enterd Data
 
                 String txtFullName = RegisterEtFullname.getText().toString();
+                String addhaarNum = addhaar.getText().toString();
                 String txtEmail = RegisterEtEmail.getText().toString();
                 String txtDob = RegisterEtBirthdate.getText().toString();
                 String txtMobile = RegisterEtMobile.getText().toString();
@@ -168,7 +170,7 @@ public class Registration extends AppCompatActivity {
                 }else {
                     txtGender = RegisterRadioButtonSelected.getText().toString();
 
-                    registerUser(txtFullName,txtEmail,txtDob,txtGender,txtMobile,txtPwd);
+                    registerUser(txtFullName,txtEmail,txtDob,txtGender,txtMobile,txtPwd,addhaarNum);
                 }
 
 
@@ -179,7 +181,7 @@ public class Registration extends AppCompatActivity {
 
     }
 
-    private void registerUser(String txtFullName, String txtEmail, String txtDob, String txtGender, String txtMobile, String txtPwd) {
+    private void registerUser(String txtFullName, String txtEmail, String txtDob, String txtGender, String txtMobile, String txtPwd, String addhaarNum) {
         FirebaseAuth auth = FirebaseAuth.getInstance();
 
         auth.createUserWithEmailAndPassword(txtEmail,txtPwd).addOnCompleteListener(Registration.this,

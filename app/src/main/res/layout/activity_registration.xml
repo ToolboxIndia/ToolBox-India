@@ -200,6 +200,30 @@
             android:padding="6dp"
             android:textSize="16sp" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addhar"
+            android:text=" Addhaar Number"
+            android:textSize="16sp"
+            android:padding="6dp"
+            android:textColor="#555555"
+            android:layout_below="@+id/RegisterEtConfirmPassword"
+            android:layout_marginTop="10dp"
+            />
+
+        <EditText
+            android:id="@+id/addharData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addhar"
+            android:background="@drawable/border"
+            android:hint="Enter Addhaar Id"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:padding="6dp"
+            android:textSize="16sp" />
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -207,7 +231,7 @@
             android:layout_marginRight="70dp"
             android:text="Register"
             android:id="@+id/RegisterBtn"
-            android:layout_below="@+id/RegisterEtConfirmPassword"
+            android:layout_below="@+id/addharData"
             android:layout_marginTop="50dp"
             android:layout_marginBottom="20dp"
             />

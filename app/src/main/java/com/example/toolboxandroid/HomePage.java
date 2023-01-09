@@ -3,11 +3,11 @@ package com.example.toolboxandroid;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
@@ -41,7 +41,6 @@ public class HomePage extends AppCompatActivity {
         navView = findViewById(R.id.navView);
         menu_img = findViewById(R.id.menu_img);
 
-
         //Drawer Navigation bar
         toolbar = new ActionBarDrawerToggle(HomePage.this,drawer,R.string.open, R.string.close);
         drawer.addDrawerListener(toolbar);
@@ -49,7 +48,7 @@ public class HomePage extends AppCompatActivity {
         menu_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                drawer.openDrawer(Gravity.START);
+                drawer.openDrawer(GravityCompat.START);
             }
         });
 
@@ -61,18 +60,19 @@ public class HomePage extends AppCompatActivity {
         btnHire.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent hireIntent = new Intent(HomePage.this,For_Work.class);  //Hire page yet to be implement
+                Intent hireIntent = new Intent(HomePage.this, For_Hire.class);  //Hire page yet to be implement
                 startActivity(hireIntent);
             }
         });
 
         btnWork.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent workIntent = new Intent(HomePage.this,For_Work.class);  //Work page yet to be implement
+            public void onClick(View v) {
+                Intent workIntent = new Intent(HomePage.this, For_Work.class);
                 startActivity(workIntent);
             }
         });
+
         bottom_nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -86,7 +86,6 @@ public class HomePage extends AppCompatActivity {
                          startActivity(new Intent(getApplicationContext(),SetupActivity.class));
                          overridePendingTransition(0,0);
                          return true;
-
                 }
                 return false;
             }
